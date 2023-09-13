@@ -1,5 +1,7 @@
-# Lite-XL style16 plugin
-Base16 colors plugin for lite-xl editor
+# Lite-XL Base16 Plugin
+Base16 colors plugin for lite-xl editor.
 
 # Requires
-Settings Plugin
+- Lite-XL Settings Plugin
+- Lite-XL Widgets Plugin
+
