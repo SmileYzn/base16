@@ -1,0 +1,11 @@
+{
+  "addons": [
+    {
+      "id": "base16",
+      "version": "0.1",
+      "mod_version": "3",
+      "description": "Theme manager with base16 color schemes for lite-xl",
+      "path": "plugins/base16"
+    }
+  ]
+}
