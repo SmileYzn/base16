@@ -163,12 +163,18 @@ local function base16_load_theme()
       -- If table with base16 colors was loaded
       if base16 then
         base16_apply_colors(base16)
+        --
+        -- Return true
+        return true
       end
-    else
-      -- Log error
-      core.error(string.format("%s was not found on themes directory.", config.plugins.base16.theme))
     end
   end
+  --
+  -- Log error
+  core.error(string.format("%s was not found on themes directory.", config.plugins.base16.theme))
+  --
+  -- Return false
+  return false
 end
 --
 -- Merge settings to theme widget
