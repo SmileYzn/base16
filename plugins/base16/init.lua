@@ -9,7 +9,7 @@ local style    = require("core.style")
 -- Get installed themes
 local function get_installed_themes()
   -- Return table
-  local files, ordered = {}, {}
+  local files, themes = {}, {}
   --
   -- Loop data and user directory
   for _, root_dir in ipairs {DATADIR, USERDIR} do
@@ -41,7 +41,7 @@ local function get_installed_themes()
             -- If is name or scheme key
             if key == "scheme" then
               if not files[filename] then
-                table.insert(ordered, {value, filename:gsub("%.yaml$", "")})
+                table.insert(themes, {value, filename:gsub("%.yaml$", "")})
               end
               files[filename] = true
             end
@@ -53,14 +53,8 @@ local function get_installed_themes()
       end
     end
   end
-  --
-  -- Sort table ascending
-  table.sort(ordered, function(a, b)
-    return a[1] < b[1]
-  end)
-  --
-  -- Return table
-  return ordered
+  -- Return themes table
+  return themes
 end
 --
 -- Apply colors to style
@@ -186,8 +180,8 @@ config.plugins.base16 = common.merge
   {
     name = "Base16 Colors",
     {
-      label = "Theme Name",
-      description = "The yaml file color scheme",
+      label = "Select theme",
+      description = "These schemes are in themes folder",
       path = "theme",
       type = "selection",
       default = "default-dark",
@@ -201,7 +195,7 @@ config.plugins.base16 = common.merge
   }
 }, config.plugins.base16)
 --
--- Load Theme
+-- Load Theme on plugin start
 core.add_thread(function()
   --
   -- Load Theme
