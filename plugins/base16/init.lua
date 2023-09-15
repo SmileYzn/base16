@@ -108,6 +108,12 @@ local function base16_apply_colors(base16)
   style.syntax["operator"] = {common.color(base16["base05"])} -- = + -  < > * % ! ^ |
   style.syntax["function"] = {common.color(base16["base0D"])} -- Function Names
   --
+  -- Pawn Language
+  style.syntax["native"]  = {common.color(base16["base0D"])} -- Native functions
+  style.syntax["forward"] = {common.color(base16["base0D"])} -- Forward functions
+  style.syntax["public"]  = {common.color(base16["base0D"])} -- Public functions
+  style.syntax["stock"]   = {common.color(base16["base0D"])} -- Stock functions
+  --
   -- Log icon colors
   style.log["INFO"]  = {icon = "i", color = style.good}
   style.log["WARN"]  = {icon = "!", color = style.warn}
