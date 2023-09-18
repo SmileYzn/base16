@@ -66,47 +66,29 @@ local function base16_apply_colors(base16)
   style.background3 = {common.color(base16["base01"])} -- Command view
   style.text        = {common.color(base16["base05"])} -- Interface Text Color
   style.caret       = {common.color(base16["base04"])} -- Cursor caret
-  style.accent      = {common.color(base16["base0D"])} -- Accent Color (Old is base08)
+  style.accent      = {common.color(base16["base0D"])} -- Accent Color
   style.dim         = {common.color(base16["base03"])} -- style.dim - text color for nonactive tabs, tabs divider, prefix in log and search result, hotkeys for context menu and command view
   style.divider     = {common.color(base16["base02"])} -- Line between nodes
   style.selection   = {common.color(base16["base02"])} -- Selection background
-
--- base00: "#282c34"
--- base01: "#353b45"
--- base02: "#3e4451"
--- base03: "#545862"
--- base04: "#565c64"
--- base05: "#abb2bf"
--- base06: "#b6bdca"
--- base07: "#c8ccd4"
--- base08: "#e06c75"
--- base09: "#d19a66"
--- base0A: "#e5c07b"
--- base0B: "#98c379"
--- base0C: "#56b6c2"
--- base0D: "#61afef"
--- base0E: "#c678dd"
--- base0F: "#be5046"
-  
   --
   -- Line Numbers
   style.line_number      = {common.color(base16["base05"])} -- Color Number
-  style.line_number2     = {common.color(base16["base0D"])} -- With cursor (Current line color) (Old is base08)
+  style.line_number2     = {common.color(base16["base0D"])} -- With cursor (Current line color)
   style.line_highlight   = {common.color(base16["base02"] .. '70')} -- Current selected line background color
   --
   -- Scrollbar colors
-  style.scrollbar        = {common.color(base16["base02"])} -- Scrollbar color
-  style.scrollbar2       = {common.color(base16["base0D"])} -- Hovered color (Old is base08)
+  style.scrollbar        = {common.color(base16["base0D"])} -- Scrollbar color
+  style.scrollbar2       = {common.color(base16["base0D"])} -- Hovered color
   style.scrollbar_track  = {common.color(base16["base01"])} -- Scroolbar free space color
   --
   -- Notification Bar
-  style.nagbar           = {common.color(base16["base0D"])} -- Background color (Old is base08)
+  style.nagbar           = {common.color(base16["base0D"])} -- Background color
   style.nagbar_text      = {common.color(base16["base05"])} -- Text Color
   style.nagbar_dim       = {common.color("rgba(0, 0, 0, 0.45)")} -- Interface opacity when nagbar is displayed, use rgba for better result
   --
   -- On Drag / Drop Tab colors
   style.drag_overlay     = {common.color("rgba(255,255,255,0.1)")} -- Opacity of drop overlay area, use rgba for better result
-  style.drag_overlay_tab = {common.color(base16["base0D"])} -- Left color when drag tab with mouse cursor (Old is base08)
+  style.drag_overlay_tab = {common.color(base16["base0D"])} -- Left color when drag tab with mouse cursor
   --
   -- Console Icon Colors
   style.good             = {common.color(base16["base0B"])} -- Succes
