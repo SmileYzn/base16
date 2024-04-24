@@ -54,6 +54,7 @@ local function get_installed_themes()
     end
   end
   -- Return themes table
+  table.sort(themes, function(a,b) return a[1] < b[1] end)
   return themes
 end
 --
